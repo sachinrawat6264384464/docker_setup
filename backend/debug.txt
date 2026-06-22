@@ -1,0 +1,31 @@
+Running direct sync...
+Total clients: 6
+Client: name=Public Schema, schema=public, plan=basic
+Client: name=Demo Property Management, schema=tenant_demo_property_management, plan=premium
+Client: name=kon, schema=tenant_kon, plan=basic
+Client: name=dhoni, schema=tenant_dhoni, plan=basic
+Client: name=raam, schema=tenant_raam, plan=enterprise
+Client: name=roka, schema=tenant_roka, plan=basic
+Updated plan basic: price=9.99, units=10
+Updated service Units: price=9.00
+Basic clients found: 4
+Updated sub for Public Schema: max_units=10, amount=99.99
+Updated sub for kon: max_units=10, amount=99.99
+Updated sub for dhoni: max_units=10, amount=99.99
+Updated sub for roka: max_units=10, amount=99.99
+Total TenantSubscriptions in DB: 6
+Sub: tenant=Demo Property Management, plan=premium, max_units=500, amount=2999.00
+Sub: tenant=raam, plan=enterprise, max_units=5000, amount=9999.00
+Sub: tenant=Public Schema, plan=basic, max_units=10, amount=99.99
+Sub: tenant=kon, plan=basic, max_units=10, amount=99.99
+Sub: tenant=dhoni, plan=basic, max_units=10, amount=99.99
+Sub: tenant=roka, plan=basic, max_units=10, amount=99.99
+Pending invoices for Public Schema: 1
+Updated invoice PF-ORG-2026-0001-2FHY to 99.99
+Pending invoices for kon: 1
+Updated invoice PF-ORG-2026-0011-EZMH to 99.99
+Pending invoices for dhoni: 1
+Updated invoice PF-ORG-2026-0008-QXVX to 99.99
+Pending invoices for roka: 2
+Updated invoice PF-ORG-2026-0006-UODP to 99.99
+Updated invoice PF-ORG-2026-0010-70ZV to 99.99

@@ -1,0 +1,49 @@
+# Django / Python .gitignore
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Database
+db.sqlite3
+db.sqlite3-journal
+debug_db.json
+
+# Environments and dependencies
+venv/
+.venv/
+env/
+ENV/
+*.env
+.env
+.env.local
+.env.*.local
+
+# Django media & static files
+media/
+staticfiles/
+
+# Logs
+*.log
+logs/
+
+# Unit test / coverage reports
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+.nox/
+
+# IDE / Editor folders
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# OS generated files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,25 @@
+{% extends "emails/base_email.html" %}
+
+{% block content %}
+<h2>Payment Receipt</h2>
+<p>Hello <span class="highlight">{{ user.get_full_name|default:user.username }}</span>,</p>
+
+<div style="background: #f9fafb; padding: 25px; border-radius: 8px; border-left: 4px solid #3b82f6; margin: 20px 0;">
+    <p style="margin: 0; font-size: 16px; color: #374151;">{{ message }}</p>
+    <div style="margin-top: 15px; border-top: 1px solid #e5e7eb; pt: 10px;">
+        <p style="margin: 5px 0;"><strong>Amount Paid:</strong> ₹{{ amount }}</p>
+        <p style="margin: 5px 0;"><strong>Transaction ID:</strong> {{ transaction_id }}</p>
+        <p style="margin: 5px 0;"><strong>Date:</strong> {{ date }}</p>
+    </div>
+</div>
+
+<p>Thank you for your payment. You can download the full receipt from your dashboard.</p>
+
+<div style="text-align: center;">
+    <a href="https://{{ domain }}/resident/payments" class="button">View Payment History</a>
+</div>
+
+<p style="margin-top: 30px;">If you have any questions regarding this transaction, please contact our billing department.</p>
+
+<p>Best regards,<br>The HOAConnect Team</p>
+{% endblock %}

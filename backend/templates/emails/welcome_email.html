@@ -1,0 +1,20 @@
+{% extends "emails/base_email.html" %}
+
+{% block content %}
+<h2>Welcome to HOA Connect Hub!</h2>
+<p>Hello <span class="highlight">{{ user.get_full_name|default:user.username }}</span>,</p>
+
+<div style="background: #f0fdf4; padding: 25px; border-radius: 8px; border-left: 4px solid #22c55e; margin: 20px 0;">
+    <p style="margin: 0; font-size: 16px; color: #166534; white-space: pre-line;">{{ message }}</p>
+</div>
+
+<p>We are excited to have you on board. Your account has been successfully activated. You can now log in to the portal to manage your property, payments, and services.</p>
+
+<div style="text-align: center;">
+    <a href="https://{{ domain }}/login" class="button">Log In to Your Account</a>
+</div>
+
+<p style="margin-top: 30px;">If you have any questions or need assistance, feel free to reach out to our support team.</p>
+
+<p>Best regards,<br>The HOAConnect Team</p>
+{% endblock %}
