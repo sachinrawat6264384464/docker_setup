@@ -58,7 +58,7 @@ urlpatterns = [
     path('api/system-reports/', include('reports.urls')),
     path('api/notifications/', include('notifications.urls')),
     path('api/calendar-alerts/', include('calendar_alerts.urls')),
-    path('api/website/', include('website.urls')),
+    # path('api/website/', include('website.urls')),
     path('api/blog/', include('blog.urls')),
     path('api/data_export/', include('data_export.urls')),
     path('api/data-export/', include('data_export.urls')),
@@ -66,9 +66,9 @@ urlpatterns = [
     path('api/webhooks/platform-stripe/', stripe_platform_webhook, name='platform-stripe-webhook'),
 
     # API Documentation
-    path('api/schema/', SpectacularAPIView.as_view(permission_classes=[IsAdminUser]), name='schema'),
-    path('api/docs/', SpectacularSwaggerView.as_view(url_name='schema', permission_classes=[IsAdminUser]), name='swagger-ui'),
-    path('api/redoc/', SpectacularRedocView.as_view(url_name='schema', permission_classes=[IsAdminUser]), name='redoc'),
+    path('api/schema/', SpectacularAPIView.as_view(permission_classes=[]), name='schema'),
+    path('api/docs/', SpectacularSwaggerView.as_view(url_name='schema', permission_classes=[]), name='swagger-ui'),
+    path('api/redoc/', SpectacularRedocView.as_view(url_name='schema', permission_classes=[]), name='redoc'),
 
     # Health check
     path('api/health/', health_check_detailed, name='health'),

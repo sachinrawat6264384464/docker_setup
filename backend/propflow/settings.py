@@ -90,7 +90,7 @@ SHARED_APPS = [
     'tenants',
     'analytics.apps.AnalyticsConfig',
     'blog.apps.BlogConfig',
-    'website.apps.WebsiteConfig',
+    # 'website.apps.WebsiteConfig',
     'pricing.apps.PricingConfig',
     'developer_portal.apps.DeveloperPortalConfig',
     'backups.apps.BackupsConfig',
@@ -132,7 +132,7 @@ TENANT_APPS = [
     
     # NEW MODULES - 7 APPS
     'communication.apps.CommunicationConfig',
-    'visitors.apps.VisitorsConfig',
+    # 'visitors.apps.VisitorsConfig',
     'vendors.apps.VendorsConfig',
     'reservations.apps.ReservationsConfig',
     'support.apps.SupportConfig',

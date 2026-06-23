@@ -90,7 +90,7 @@ from communication.models import (
 )
 
 # Visitors
-from visitors.models import VisitorType, Visitor, VisitorPass, VisitorLog, BlacklistedVisitor, VisitorFeedback
+# from visitors.models import VisitorType, Visitor, VisitorPass, VisitorLog, BlacklistedVisitor, VisitorFeedback
 
 # Vendors
 from vendors.models import VendorCategory, Vendor, VendorService, VendorContract, VendorReview, VendorPayment, VendorInsurance
@@ -140,10 +140,10 @@ from communication.admin import (
     MessageReactionAdmin, MessageReadReceiptAdmin,
     AnnouncementAttachmentAdmin, AnnouncementViewAdmin
 )
-from visitors.admin import (
-    VisitorTypeAdmin, VisitorAdmin, VisitorPassAdmin, VisitorLogAdmin,
-    BlacklistedVisitorAdmin, VisitorFeedbackAdmin
-)
+# from visitors.admin import (
+#     VisitorTypeAdmin, VisitorAdmin, VisitorPassAdmin, VisitorLogAdmin,
+#     BlacklistedVisitorAdmin, VisitorFeedbackAdmin
+# )
 from vendors.admin import (
     VendorCategoryAdmin, VendorAdmin, VendorServiceAdmin, VendorContractAdmin,
     VendorReviewAdmin, VendorPaymentAdmin, VendorInsuranceAdmin
@@ -233,12 +233,12 @@ tenant_admin_site.register(AnnouncementAttachment, AnnouncementAttachmentAdmin)
 tenant_admin_site.register(AnnouncementView, AnnouncementViewAdmin)
 
 # --- Visitors ---
-tenant_admin_site.register(VisitorType, VisitorTypeAdmin)
-tenant_admin_site.register(Visitor, VisitorAdmin)
-tenant_admin_site.register(VisitorPass, VisitorPassAdmin)
-tenant_admin_site.register(VisitorLog, VisitorLogAdmin)
-tenant_admin_site.register(BlacklistedVisitor, BlacklistedVisitorAdmin)
-tenant_admin_site.register(VisitorFeedback, VisitorFeedbackAdmin)
+# tenant_admin_site.register(VisitorType, VisitorTypeAdmin)
+# tenant_admin_site.register(Visitor, VisitorAdmin)
+# tenant_admin_site.register(VisitorPass, VisitorPassAdmin)
+# tenant_admin_site.register(VisitorLog, VisitorLogAdmin)
+# tenant_admin_site.register(BlacklistedVisitor, BlacklistedVisitorAdmin)
+# tenant_admin_site.register(VisitorFeedback, VisitorFeedbackAdmin)
 
 # --- Vendors ---
 tenant_admin_site.register(VendorCategory, VendorCategoryAdmin)
@@ -286,7 +286,7 @@ v1_patterns = [
     path('parking/', include('parking.urls')),
     path('entertainment/', include('entertainment.urls')),
     path('communication/', include('communication.urls')),
-    path('visitors/', include('visitors.urls')),
+    # path('visitors/', include('visitors.urls')),
     path('vendors/', include('vendors.urls')),
     path('marketplace/', include('marketplace.urls')),
     path('social/', include('social.urls')),
@@ -299,7 +299,7 @@ v1_patterns = [
     path('reservations/', include('reservations.urls')),
     path('inspections/', include('inspections.urls')),
     path('blog/', include('blog.urls')),
-    path('website/', include('website.urls')),
+    # path('website/', include('website.urls')),
     path('system/tenants/', include('tenants.urls_system')),
     path('tenants/', include('tenants.urls')),
     path('location/', include('location_master.urls')),
@@ -339,9 +339,9 @@ urlpatterns = [
     path('api/system/tenants/current/', current_tenant),
 
     # API Documentation
-    path('api/schema/', SpectacularAPIView.as_view(permission_classes=[IsAdminUser]), name='schema'),
-    path('api/docs/', SpectacularSwaggerView.as_view(url_name='schema', permission_classes=[IsAdminUser]), name='swagger-ui'),
-    path('api/redoc/', SpectacularRedocView.as_view(url_name='schema', permission_classes=[IsAdminUser]), name='redoc'),
+    path('api/schema/', SpectacularAPIView.as_view(permission_classes=[]), name='schema'),
+    path('api/docs/', SpectacularSwaggerView.as_view(url_name='schema', permission_classes=[]), name='swagger-ui'),
+    path('api/redoc/', SpectacularRedocView.as_view(url_name='schema', permission_classes=[]), name='redoc'),
 
     # Health check
     path('api/health/', health_check_detailed, name='health'),
